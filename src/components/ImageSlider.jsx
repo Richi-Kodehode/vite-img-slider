@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { carImages } from "./data/carimages";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { FaRegCircleDot } from "react-icons/fa6";
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,8 +14,8 @@ export default function ImageSlider() {
   }
 
   return (
-    <div className="max-w-[1024px] m-auto py-3 px-4 relative group rounded-2xl flex justify-center">
-      <div className="aspect-5/4 flex overflow-hidden rounded-2xl">
+    <div className="max-w-[1080px] m-auto py-3 px-4 relative group rounded-2xl flex justify-center grow-0 shrink-0">
+      <div className="flex overflow-hidden rounded-2xl">
         <div
           className="flex transition-transform duration-500"
           style={{
@@ -46,6 +47,19 @@ export default function ImageSlider() {
       >
         <BsChevronCompactRight size={30} />
       </div>
+      <span className="absolute bottom-8 left-0 right-0 flex justify-center gap-1">
+        {carImages.map((_, index) => {
+          return (
+            <button
+              className="cursor-pointer text-white flex flex-row justify-center"
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+            >
+              <FaRegCircleDot className="hover:scale-80" />
+            </button>
+          );
+        })}
+      </span>
     </div>
   );
 }
