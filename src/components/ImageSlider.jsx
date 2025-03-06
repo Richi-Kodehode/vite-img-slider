@@ -7,11 +7,9 @@ export default function ImageSlider() {
 
   function nextIndex() {
     setCurrentIndex((prev) => (prev < carImages.length - 1 ? prev + 1 : 0));
-    console.log(currentIndex);
   }
   function previousIndex() {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : carImages.length - 1));
-    console.log(currentIndex);
   }
 
   return (
