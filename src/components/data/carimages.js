@@ -1,17 +1,17 @@
 export const carImages = [
   {
-    src: "/public/celine250.webp",
+    src: "/celine250.webp",
   },
   {
-    src: "/public/e92-roller.webp",
+    src: "/e92-roller.webp",
   },
   {
-    src: "/public/lada-roller.webp",
+    src: "/lada-roller.webp",
   },
   {
-    src: "/public/Larsen-235.webp",
+    src: "/Larsen-235.webp",
   },
   {
-    src: "/public/soarer.webp",
+    src: "/soarer.webp",
   },
 ];
