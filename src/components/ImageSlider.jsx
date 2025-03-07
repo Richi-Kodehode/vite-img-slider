@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { carImages } from "./data/carimages";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { FaRegCircleDot } from "react-icons/fa6";
+import { FaCircle } from "react-icons/fa6";
 
 export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,7 +47,7 @@ export default function ImageSlider() {
       >
         <BsChevronCompactRight size={30} />
       </div>
-      <span className="absolute bottom-8 left-0 right-0 flex justify-center gap-1">
+      <span className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
         {carImages.map((_, index) => {
           return (
             <button
@@ -55,7 +55,7 @@ export default function ImageSlider() {
               key={index}
               onClick={() => setCurrentIndex(index)}
             >
-              <FaRegCircleDot className="hover:scale-80" />
+              <FaCircle className="hover:scale-80" />
             </button>
           );
         })}
