@@ -1,4 +1,4 @@
-export const carImages = [
+export const currentImages = [
   {
     src: "/celine250.webp",
   },

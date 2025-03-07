@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { carImages } from "./data/carimages";
+import { currentImages } from "./data/currentImages";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { FaCircle } from "react-icons/fa6";
 
@@ -7,10 +7,10 @@ export default function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   function nextIndex() {
-    setCurrentIndex((prev) => (prev < carImages.length - 1 ? prev + 1 : 0));
+    setCurrentIndex((prev) => (prev < currentImages.length - 1 ? prev + 1 : 0));
   }
   function previousIndex() {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : carImages.length - 1));
+    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : currentImages.length - 1));
   }
 
   return (
@@ -20,10 +20,10 @@ export default function ImageSlider() {
           className="flex transition-transform duration-500"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
-            width: `${carImages.length * 100}%`,
+            width: `${currentImages.length * 100}%`,
           }}
         >
-          {carImages.map((image, index) => (
+          {currentImages.map((image, index) => (
             <img
               key={index}
               className="w-full h-full object-cover"
@@ -48,7 +48,7 @@ export default function ImageSlider() {
         <BsChevronCompactRight size={30} />
       </div>
       <span className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
-        {carImages.map((_, index) => {
+        {currentImages.map((_, index) => {
           return (
             <button
               className="cursor-pointer text-white/50 flex flex-row justify-center"
