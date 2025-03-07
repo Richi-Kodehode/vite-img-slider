@@ -51,7 +51,7 @@ export default function ImageSlider() {
         {carImages.map((_, index) => {
           return (
             <button
-              className="cursor-pointer text-white flex flex-row justify-center"
+              className="cursor-pointer text-white/50 flex flex-row justify-center"
               key={index}
               onClick={() => setCurrentIndex(index)}
             >
